@@ -1,0 +1,472 @@
+
+
+.profile-page,
+.company-profile-page {
+  padding: var(--space-12) 0;
+}
+
+/* Profile Grid Layout */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.profile-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-sidebar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: 100px;
+}
+
+.profile-card {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Form Fields */
+.field-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.field-group.full {
+  grid-template-columns: 1fr;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-field label {
+  font-weight: var(--fw-semibold);
+  color: var(--text);
+  font-size: var(--text-sm);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--text-base);
+  transition: var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-softer);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Avatar Upload */
+.avatar-upload {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-6);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.avatar-upload:hover {
+  border-color: var(--primary);
+  background: var(--primary-softer);
+}
+
+.avatar-upload-icon {
+  font-size: var(--text-3xl);
+  color: var(--primary);
+}
+
+.avatar-upload-text {
+  margin: 0;
+  color: var(--text);
+  font-weight: var(--fw-semibold);
+}
+
+.avatar-upload-hint {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.avatar-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Review Card */
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: var(--space-4);
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-softer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-info h4 {
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  color: var(--text-dark);
+}
+
+.review-info p {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.review-rating {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.review-rating i {
+  color: #FBB924;
+  font-size: var(--text-base);
+}
+
+.review-body p {
+  margin: 0;
+  color: var(--text-2);
+  line-height: var(--line-relaxed);
+  font-size: var(--text-sm);
+}
+
+.review-footer {
+  display: flex;
+  gap: var(--space-4);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-3);
+}
+
+.review-action {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.review-action:hover {
+  color: var(--primary);
+}
+
+/* Profile Sidebar Items */
+.sidebar-item {
+  padding: var(--space-4);
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sidebar-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--primary-softer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: var(--text-lg);
+}
+
+.sidebar-item-title {
+  margin: 0;
+  font-weight: var(--fw-semibold);
+  color: var(--text-dark);
+}
+
+.sidebar-item-text {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--primary-softer);
+  color: var(--primary);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  border: 1px solid var(--primary-light);
+  transition: var(--transition-fast);
+}
+
+.skill-tag:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.skill-tag .remove {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-base);
+}
+
+/* Experience Section */
+.experience-item {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: var(--space-4);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 60px;
+}
+
+.experience-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.experience-line {
+  flex: 1;
+  width: 2px;
+  background: var(--border);
+  min-height: 100px;
+}
+
+.experience-content h4 {
+  margin: 0 0 var(--space-1) 0;
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  color: var(--text-dark);
+}
+
+.experience-content p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.experience-content small {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--text-gray);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    position: static;
+    top: auto;
+  }
+
+  .field-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-content,
+  .profile-sidebar {
+    padding: var(--space-4);
+  }
+
+  .profile-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-item {
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .review-header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page,
+  .company-profile-page {
+    padding: var(--space-8) 0;
+  }
+
+  .profile-content {
+    padding: var(--space-3);
+  }
+
+  .avatar-preview {
+    width: 100px;
+    height: 100px;
+  }
+
+  .field-group {
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .skills-list {
+    gap: var(--space-2);
+  }
+
+  .skill-tag {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-xs);
+  }
+
+  .experience-item {
+    flex-direction: column;
+    padding: var(--space-3);
+  }
+
+  .experience-timeline {
+    flex-direction: row;
+    align-items: center;
+    min-width: auto;
+    gap: var(--space-2);
+  }
+
+  .experience-line {
+    width: auto;
+    height: 2px;
+    min-height: auto;
+    min-width: 40px;
+  }
+
+  .review-footer {
+    flex-wrap: wrap;
+  }
+}
